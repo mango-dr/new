@@ -1,0 +1,16 @@
+
+
+<div *ngIf="coffee" class="details">
+  <h2>{{coffee.name | uppercase | translate}}</h2>
+<!--  <div><span>id: </span>{{coffee.id}}</div>-->
+  <div class="elements">
+    <img [src]="assetPath + coffee.imagePath" class="card-img-top" [alt]="coffee.name">
+    <p>{{coffee.description  | translate}}</p> <br>
+    <p>{{coffee.price}}</p>
+  </div>
+  <div class="buttons">
+  <button (click)="goBack()">Go back</button>
+
+  <button (click)="addToCart(coffee)">Add to a cart</button>
+</div>
+</div>

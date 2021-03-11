@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "coffee-app-123"
+  },
+  "targets": {
+    "coffee-app-123": {
+      "hosting": {
+        "coffee-app": [
+          "coffee-app-123"
+        ]
+      }
+    }
+  }
+}

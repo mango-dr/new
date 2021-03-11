@@ -1,0 +1,10 @@
+{
+    "name": "ru:имя",
+    "auth.title": "ru: auth title",
+    "login": {
+        "title": "ru: login title"
+    },
+
+    "coffee.name": "Латте"
+}
+

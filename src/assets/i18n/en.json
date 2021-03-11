@@ -1,0 +1,9 @@
+{
+    "name": "en:name",
+    "auth.title": "en: auth title",
+    "login": {
+        "title": "en: login title"
+    },
+
+    "coffee.name": "Latte"
+}

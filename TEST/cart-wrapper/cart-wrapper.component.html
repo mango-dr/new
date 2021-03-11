@@ -1,0 +1,45 @@
+<!-- <table>
+<thead>
+<tr>
+<th class="font-white" scope="col">Product</th>
+<th class="text-center font-white" scope="col">Quantity</th>
+<th class="text-center font-white" scope="col">Price</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+    <tr *ngFor="let item of cartItems">
+        <td><img [src]="assetPath + item.imagePath"></td>
+        <td class="font-white">{{item.title}}</td>
+        
+        <td><input class="form-control" type="text" (change)="cart.add()" [value]="item.qty"></td>
+        <td class="text-right font-white">{{item.price | currency:'USD'}}</td>
+        <td class="text-righ font-white"><button (click)="cart.remove(item._id)" class="btn btn-sm btn-danger"></button></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="font-white">Sub-Total</td>
+        <td class="text-right font-white">{{cart.getTotalItembyProp('price') | currency:'USD'}}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="font-white">Shipping</td>
+        <td class="text-right font-white">6.90 $</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="font-white">Total</td>
+        <td class="text-right font-white">{{cart.getTotalItembyProp('price') | currency:'USD'}}</td>
+    </tr>
+    
+</tbody>
+</table> -->

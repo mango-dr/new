@@ -1,0 +1,59 @@
+table img {
+    width: 90px;
+    height: auto;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    left: 25%;
+    width: 700px;
+
+  }
+
+  .table {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+  }
+
+
+  th {
+    font-weight: normal;
+    border-bottom: 2px solid white;;
+    border-right: 30px solid white;
+    border-left: 30px solid white;
+    color: black;
+    padding: 8px 2px;
+  }
+
+
+
+.header {
+    background-color: none;
+    text-align: center;
+    color: black;
+    height: 50px;
+}
+
+.total {
+    float: right;
+}
+
+.buttons button {
+
+    height: 35px;
+    margin-right: 20px;
+    color: white;
+    background-color: chocolate;
+}
+
+
+
+  @media (max-width: 350px){
+    mat-card {
+        width: 100vm;
+    }
+}
+  

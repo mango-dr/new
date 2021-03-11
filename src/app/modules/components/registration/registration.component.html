@@ -1,0 +1,36 @@
+<!-- <app-header></app-header> -->
+<mat-card>
+    <mat-card-title class="text-center"><h1>Registration page</h1></mat-card-title>
+    <mat-card-content>
+
+<section class="registration--wrapper">
+    <form class="registration--form" [formGroup]="registrationForm"
+         (ngSubmit)="register()">
+         <mat-form-field class="full-width">
+                <label>Enter your name: <input type="text" matInput formControlName="name" autocomplete="false"></label>
+        </mat-form-field>
+        
+        <mat-form-field class="full-width">
+            <label>Enter your email: <input type="email" matInput formControlName="email" autocomplete="false"></label>
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+            <label>Enter your password: <input type="password" matInput formControlName="password" autocomplete="false"></label>
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+            <label>Confirm your password:<input type="password" matInput formControlName="confirmPassword" autocomplete="false"></label>
+        </mat-form-field>
+
+        <button mat-raised-button class="reg--button" type="button" [disabled]="registrationForm.invalid">Register!</button>
+    </form>
+
+        <section>
+            <mat-form-field class="full-width">
+            Already have a account?
+            <a [routerLink]="'../login'">Go to a login page or log in with Google</a>
+            </mat-form-field>
+        </section>
+</section>
+</mat-card-content>
+</mat-card>
