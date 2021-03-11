@@ -1,11 +1,11 @@
-<app-header></app-header>
-<div *ngIf="coffee" class="details">
 
-  <h2>{{coffee.name | uppercase}}</h2>
+
+<div *ngIf="coffee" class="details">
+  <h2>{{coffee.name | uppercase | translate}}</h2>
 <!--  <div><span>id: </span>{{coffee.id}}</div>-->
   <div class="elements">
     <img [src]="assetPath + coffee.imagePath" class="card-img-top" [alt]="coffee.name">
-    <p>{{coffee.description}}</p> <br>
+    <p>{{coffee.description  | translate}}</p> <br>
     <p>{{coffee.price}}</p>
   </div>
   <div class="buttons">

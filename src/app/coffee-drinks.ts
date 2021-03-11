@@ -2,9 +2,9 @@ import { Coffee } from './coffee';
 
 export const Drinks: Coffee[] = [
   { id: 1,
-    imagePath: "/images/black_coffee.jpg",
+    imagePath: '/images/black-coffee.jpg',
     name: 'Black coffee',
-    description: 'Simply put, black coffee is a combination of water and coffee without any milk. You should serve it without any added flavors such as honey, cream, and milk. The addition of these products changes the aroma and color of the coffee, turning it lighter-brown or white.',  
+    description: 'Simply put, black coffee is a combination of water and coffee without any milk. You should serve it without any added flavors such as honey, cream, and milk. The addition of these products changes the aroma and color of the coffee, turning it lighter-brown or white.',
     price: 15
     },
 
@@ -29,15 +29,15 @@ export const Drinks: Coffee[] = [
     price: 15
   },
 
-  { id: 5, 
+  { id: 5,
     imagePath: '/images/espresso.jpg',
     name: 'Espresso',
     description: 'A strong coffee brewed by forcing hot water under pressure through darkly roasted, finely ground coffee beans.',
     price: 15
   },
 
-  { id: 6, 
-    imagePath: '/images/ristretto2.jpg', 
+  { id: 6,
+    imagePath: '/images/ristretto2.jpg',
     name: 'Ristretto',
     description: 'This involves brewing 30mls of coffee over the same pour time as a normal espresso shot. A traditional espresso uses approximately 14 grams of coffee for a double espresso.',
     price: 15
@@ -57,14 +57,14 @@ export const Drinks: Coffee[] = [
     price: 15
   },
 
-  { id: 9, 
-    imagePath: '/images/iced_coffee2.png', 
+  { id: 9,
+    imagePath: '/images/iced_coffee2.png',
     name: 'Iced Coffee',
     description: 'Great cold brew coffee will have a smoothness that is unlike any traditionally brewed coffee. Some might say that a bitter flavor is the goal, but done properly, cold brewing maximizes smoothness and minimizes bitterness.',
     price: 15
   },
 
-  { id: 10, 
+  { id: 10,
     imagePath: '/images/Hot-Chocolate2.jpg',
     name: 'Hot Chocolate',
     description: 'Hot chocolate, also known as hot cocoa or drinking chocolate, is a heated drink consisting of shaved chocolate, melted chocolate or cocoa powder, heated milk or water, and usually a sweetener.',

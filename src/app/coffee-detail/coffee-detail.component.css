@@ -10,7 +10,7 @@ h2 {
   position: relative;
   display: flex;
   justify-content: center;
-  margin-top: 10%;
+
 
 }
 
@@ -33,11 +33,13 @@ p {
 }
 
 .buttons {
+  width: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 button {
+  
   position: relative;
   display: flex;
   justify-content: center;

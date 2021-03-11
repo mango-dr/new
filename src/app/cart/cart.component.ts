@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { CartService } from '../cart.service';
 import { Coffee } from '../coffee';
@@ -11,17 +11,11 @@ import { Coffee } from '../coffee';
 export class CartComponent implements OnInit {
   drinks = this.cartService.getDrinks();
   assetPath = './assets/';
-  qtyAddedToCart: number;
-  @Input() coffee: Coffee;
-
-  remove(coffee) {
-    this.cartService.remove(coffee.id);
-    window.alert('Your product has been deleted from the cart!');
-  }
+ item;
 
   
-  removeFromCart(): void {
-    this.qtyAddedToCart = this.cartService.removeFromCart(this.coffee.id);
+  removeFromCart(id: number): void {
+     this.cartService.removeFromCart(id);
     window.alert('Your product has been deleted from the cart!');
   
   }
@@ -32,8 +26,25 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  increase(coffee: Coffee): void {
+    this.cartService.addToCart(coffee);
+  }
+
+  decrease(coffee: Coffee): void {
+    this.cartService.decreaseCount(coffee.id);
+  }
+
+  count(coffee: Coffee): void {
+    this.cartService.countPrice(coffee);
+  }
+
   goBack(): void {
     this.location.back();
   }
 
 }
+
+
+
+

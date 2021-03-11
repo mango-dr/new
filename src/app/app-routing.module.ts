@@ -11,22 +11,24 @@ import { CoffeeDetailComponent } from './coffee-detail/coffee-detail.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { LoginComponent } from './modules/components/login/login.component';
 import { RegistrationComponent } from './modules/components/registration/registration.component';
-import { UserprofileComponent } from './modules/components/user-profile/user-profile.component';
+import { UserProfileComponent } from './modules/components/user-profile/user-profile.component';
 import { AuthGuard } from './modules/auth/guards/auth.guard';
+
+
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegistrationComponent},
-  { path: 'profile', component: UserprofileComponent},
+  { path: 'profile', component: UserProfileComponent},
   { path: 'cart', component: CartComponent},
   { path: 'shipping', component: ShippingComponent },
   { path: 'favorite', component: FavoriteComponent },
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'detail/:id', component: CoffeeDetailComponent },
   { path: 'drinks', component: CoffeeComponent },
-  { path: 'form', component: CoffeeFormComponent},
+  { path: 'form', component: CoffeeFormComponent },
   { path: '**', component: NotFoundComponent }
 ];
 
@@ -34,7 +36,10 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  declarations: [	
+      
+   ]
 })
 
 export class AppRoutingModule { }

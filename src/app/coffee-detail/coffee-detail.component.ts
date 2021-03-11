@@ -5,6 +5,8 @@ import { Location } from '@angular/common';
 import { Coffee } from '../coffee';
 import { CoffeeService } from '../coffee.service';
 import { CartService } from '../cart.service';
+import { TranslateService } from '@ngx-translate/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-coffee-detail',
@@ -25,8 +27,15 @@ export class CoffeeDetailComponent implements OnInit {
     private route: ActivatedRoute,
     private coffeeService: CoffeeService,
     private location: Location,
-    private cartService: CartService
-  ) {}
+    private cartService: CartService){
+}
+
+
+
+
+  // get Translate(): Observable<string>{
+  //   return this.translateService.get('title');
+  // }
 
   ngOnInit(): void {
     this.getCoffee();

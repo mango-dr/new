@@ -1,7 +1,19 @@
 <mat-toolbar>
-    <button mat-icon-button class="menu-icon" aria-label="menu icon">
-      <mat-icon>menu</mat-icon>
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+  <div mat-menu-item [role]="translateService.getDefaultLang()"
+    (valueChange)="switchLang($event)">
+    <button (click)="'en'">English</button>
+    <button (click)="'ru'">Русский</button>
+  </div>
+  <button mat-menu-item>
+      <mat-icon>notifications_off</mat-icon>
+      <span>Disable alerts</span>
     </button>
+  </mat-menu>
+  
     <span>Coffee App</span>
     <span class="spacer"></span>
 
@@ -9,6 +21,11 @@
     <button mat-icon-button class="favorite-icon" aria-label="heart icon">
       <mat-icon>favorite</mat-icon>
     </button></a>
+
+    <a routerLink="/drinks">
+      <button mat-icon-button class="drink-icon" aria-label="drink icon">
+        <mat-icon>local_cafe</mat-icon>
+      </button></a>
     
     <a routerLink="/cart">
     <button mat-icon-button class="material-icons" ria-label="basket icon">
@@ -24,5 +41,15 @@
       <mat-icon>home</mat-icon>
     </button></a>
 </mat-toolbar>
+
+
   
   
+
+
+<!-- <mat-label>Choose an option</mat-label>
+        <button [value]="translateService.getDefaultLang()"
+          (valueChange)="switchLang($event)">
+          <button [value]="'en'">English</button>
+          <button [value]="'ru'">Русский</button>
+        </button> -->

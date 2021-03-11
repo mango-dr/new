@@ -1,0 +1,35 @@
+.profile {
+    width: 400px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.profile-card {
+    padding: 20px;
+}
+.profile--avatar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile--avatar-image, .profile--avatar-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.profile--avatar-controls button {
+    margin: 0 10px;
+}
+.profile--form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.profile--form-field {
+    width: 100%;
+}

@@ -1,9 +1,9 @@
 <app-header></app-header>
 
 <div class="card">
-    <img [src]="assetPath + coffee.imagePath" class="card-img-top" [alt]="coffee.title">
+    <img [src]="assetPath + coffee.imagePath" class="card-img-top" [alt]="coffee.name">
     <div class="card-body">
-        <h5 class="card-title">{{coffee.title}}</h5>
+        <h5 class="card-title">{{coffee.name}}</h5>
         <p class="card-text">{{(coffee.description.length>30)? (coffee.description | slice:0:30)+'..':(coffee.description)}}</p>
         <div class="price">{{coffee.price}}</div>
     </div>
