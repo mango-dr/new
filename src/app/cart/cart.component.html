@@ -1,0 +1,41 @@
+<app-header></app-header>
+
+<div class="card">
+<h3>Cart</h3>
+
+<div class="cart-item" *ngFor="let coffee of drinks">
+<img [src]="assetPath + coffee.imagePath" class="card-img-top" [alt]="coffee.name">
+<span>{{ coffee.name }}</span>
+<span>{{ coffee.price | currency }}</span>
+<button type="button" class="remove--button" (click)="removeFromCart(coffee.id)">Remove</button>
+</div>
+
+<div class="card-body">
+  
+
+</div>
+
+<p>
+    <a routerLink="/shipping">Shipping Prices</a>
+  </p>
+
+
+  <button (click)="goBack()">Go back</button>
+</div>
+
+
+
+<!-- <div class="card">
+    
+    <div class="card-body">
+        <h5 class="card-title">{{coffee.title}}</h5>
+        <p class="card-text">{{(coffee.description.length>30)? (coffee.description | slice:0:30)+'..':(coffee.description)}}</p>
+        <div class="price">{{coffee.price}}</div>
+    </div>
+    <div class="card-body">
+        <a [hidden]="qtyAddedToCart>0" class="btn btn-success" (click)="addToCart()" role="button">Add to card</a>
+        <button [hidden]="qtyAddedToCart==0" type="button" class="btn btn-success">
+           <a (click)="removeFromCart()">-</a> <span class="badge badge-light">{{qtyAddedToCart}}</span> <a (click)="addToCart()">+</a>
+        </button>
+    </div>
+</div> -->

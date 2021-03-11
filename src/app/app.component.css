@@ -1,0 +1,49 @@
+h1 {
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+h2 {
+  font-size: 2em;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+button {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  right: 7px;
+  margin-left: auto;
+  margin-right: 0;
+  color: brown;
+}
+
+nav a {
+  height: auto;
+  width: 100px;
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 20px;
+  position: relative;
+  top: 100px;
+  left: 45%;
+  /*right: 50%;*/
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-flow: column;
+  background-color: #eee;
+  border-radius: 4px;
+}
+nav a:visited, a:link {
+  color: #544333;
+}
+nav a:hover {
+  color: #4d210f;
+  background-color: #CFD8DC;
+}
+nav a.active {
+  color: #4d210f;
+}
+
+

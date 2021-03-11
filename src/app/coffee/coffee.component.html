@@ -1,0 +1,26 @@
+<app-header></app-header>
+<app-coffee-search></app-coffee-search>
+
+<h2>Select a drink</h2>
+
+<ul class="drinks">
+  <li *ngFor="let coffee of drinks">
+
+    <button (click)="addToFavorite(coffee)" mat-icon-button class="favorite-icon" aria-label="heart icon"><mat-icon>favorite</mat-icon></button> 
+    
+    <a routerLink="/detail/{{coffee.id}}">
+      <img [src]="assetPath + coffee.imagePath" class="card-img-top" [alt]="coffee.name">
+      <span class="title">{{coffee.name}}</span> 
+      <span class="description">{{coffee.description}}</span>
+      <span class="price">{{coffee.price}} </span> 
+    </a>
+
+    <a class="btn btn-success" (click)="addToCart(coffee)" role="button">Add to card</a>
+      <!-- <button [hidden]="qtyAddedToCart==0" type="button" class="btn btn-success">
+         <a (click)="removeFromCart()">-</a> <span class="badge badge-light">{{qtyAddedToCart}}</span> <a (click)="addToCart()">+</a>
+      </button> -->
+    
+  </li>
+</ul>
+
+<!-- [hidden]="qtyAddedToCart>0" -->

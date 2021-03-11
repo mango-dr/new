@@ -1,0 +1,27 @@
+.search-component {
+    display: inline-block;
+    width: 100vw;
+    
+}
+
+#search-box {
+    width: 100vw;
+    height: 30px;
+    border-style: outset;
+    border-top: none;
+    border-left: none;
+    border-color: chocolate;
+    font-style: italic;
+    color: chocolate;
+}
+
+.search-result a {
+    text-decoration: none;
+    list-style-type: none;
+    color: chocolate;
+}
+
+.search-result li {
+    text-decoration: none;
+    list-style-type: none;
+}

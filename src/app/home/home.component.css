@@ -1,0 +1,59 @@
+
+
+nav a {
+  text-decoration: none;
+  background-color: #eee;
+  color: brown;
+  font-size: 25px;
+  padding: 15px 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+nav a:visited, a:link {
+  color: #8b7560;
+}
+nav a:hover {
+  color: #5f390d;
+  background-color: #dcd6cf;
+}
+nav a.active {
+  color: #5f390d;
+} 
+
+nav {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  top: 50%;
+  left: 40%;
+  transform: translate(0, -50%);
+  text-decoration: none;
+  background-color: none;
+  color: brown;
+}
+
+
+.host {
+  background-image: url("/assets/images/background-coffee.jpg");
+}
+
+
+
+
+/* @media (max-width: 600px) {
+  .module {
+    font-size: 10px;
+    max-height: 75px; }
+}
+@media (max-width: 1024px) {
+  .grid {
+    margin: 0;
+  }
+  .module {
+    min-width: 60px;
+  }
+} */
