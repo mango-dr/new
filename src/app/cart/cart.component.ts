@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Location } from '@angular/common';
 import { CartService } from '../cart.service';
 import { Coffee } from '../coffee';
@@ -8,24 +8,20 @@ import { Coffee } from '../coffee';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
-export class CartComponent implements OnInit {
+export class CartComponent {
   drinks = this.cartService.getDrinks();
   assetPath = './assets/';
  item;
 
-  
-  removeFromCart(id: number): void {
-     this.cartService.removeFromCart(id);
-    window.alert('Your product has been deleted from the cart!');
-  
-  }
-
   constructor(private cartService: CartService,
               private location: Location) { }
 
-  ngOnInit(): void {
+  get price(): number {
+    return this.drinks.reduce((sum, drink) => {
+      sum += drink.count * drink.coffee.price;
+      return sum;
+    }, 0);
   }
-
 
   increase(coffee: Coffee): void {
     this.cartService.addToCart(coffee);
@@ -41,6 +37,11 @@ export class CartComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  removeFromCart(id: number): void {
+    this.cartService.removeFromCart(id);
+    window.alert('Your product has been deleted from the cart!');
   }
 
 }

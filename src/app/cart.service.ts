@@ -30,9 +30,9 @@ export class CartService {
     if (coffeeInCart) {
       coffeeInCart.count ++;
     } else {
-      const newItem = {id: coffee.id, coffee, count: 1}
+      const newItem = {id: coffee.id, coffee, count: 1};
       this.drinks.push(newItem);
-    } 
+    }
   }
 
 
@@ -51,8 +51,8 @@ decreaseCount(id: number): void {
     const coffeeToDeleteIndex = this.drinks.findIndex(item => item.id === id);
     if (coffeeToDeleteIndex === -1) {
       return;
-    } 
-    
+    }
+
     this.drinks.splice(coffeeToDeleteIndex, 1)
     // const drinks = JSON.parse(localStorage.getItem('drinks'));
     // const coffee = drinks[id];
@@ -74,7 +74,7 @@ decreaseCount(id: number): void {
     return foundedCoffee.count;
   }
 
-  
+
   getDrinks() {
     return this.drinks;
   }
@@ -88,5 +88,5 @@ decreaseCount(id: number): void {
     return this.http.get('/assets/shipping.json');
   }
 
-  
+
 }

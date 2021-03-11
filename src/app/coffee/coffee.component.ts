@@ -19,14 +19,17 @@ export class CoffeeComponent implements OnInit {
   assetPath = './assets/';
 
 
-  constructor(private coffeeService: CoffeeService, 
+  constructor(private coffeeService: CoffeeService,
               private cartService: CartService,
-              private favoriteService: FavoriteService) { }
-
+              private favoriteService: FavoriteService) {
+  }
 
   ngOnInit(): void {
     this.getDrinks();
+  }
 
+  coffeeInFavorite(id: number): boolean {
+    return this.favoriteService.isFavorite(id);
   }
 
   addToCart(coffee: Coffee): void {
