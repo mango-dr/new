@@ -1,11 +1,21 @@
 
 
 <nav>
-  <a routerLink="/home">Home</a>
-  <a routerLink="/drinks">Drinks</a>
-  <a routerLink="/register">Create an account</a> 
+  <a routerLink="/home">{{ 'home' | translate}}</a>
+  <a routerLink="/drinks">{{ 'drinks' | translate}}</a>
+  <a routerLink="/register">{{ 'account' | translate}}</a> 
 </nav>
 
+
+<!-- <mat-form-field>
+  <mat-label>Choose an option</mat-label>
+          <mat-select [value]="translateService.getDefaultLang()"
+            (valueChange)="switchLang($event)">
+          
+            <mat-option [value]="'en'">English</mat-option>
+            <mat-option [value]="'ru'">Русский</mat-option>
+          </mat-select>
+  </mat-form-field> -->
 
 
 

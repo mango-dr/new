@@ -1,8 +1,15 @@
+.detail {
+  background-color: #EEE;
+  width: 600px;
+  height: 500px;
+  margin-left: 25%;
+}
 
 .details {
   display: flex;
   justify-content: center;
   flex-direction: column;
+
 }
 
 h2 {
@@ -33,10 +40,11 @@ p {
 }
 
 .buttons {
-  width: 100px;
+  width: 250px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 150px;
 }
 button {
   

@@ -8,30 +8,33 @@ import { Coffee } from './coffee';
 })
 export class FavoriteService {
 
-  drinks: FavItem[] = [];
+  favorites: FavItem[] = [];
 
   constructor(private http: HttpClient) { }
 
 
 
-  addToFavorite(coffee: Coffee) {
-    const coffeeFav = this.drinks.find(item => item.id === coffee.id);
-    if (coffeeFav) {
-      coffeeFav.count ++;
+  addToFavorite(coffee: Coffee): void {
+    const index = this.favorites.findIndex(item => item.id === coffee.id);
+    if (index !== -1) {
+      this.favorites.splice(index, 1);
     } else {
-      const newItem = {id: coffee.id, coffee, name: coffee.name, price: coffee.price, count:1}
-    this.drinks.push(newItem);
+      const newItem = {id: coffee.id, coffee};
+    this.favorites.push(newItem);
   }
   }
 
 
-  getFavorites() {
-    return this.drinks;
+  getFavorites(): FavItem[] {
+    return this.favorites;
   }
 
-  clearFavorite() {
-    this.drinks = [];
-    return this.drinks;
+  isFavorite(id: number): boolean {
+  return !!this.favorites.find(item => item.id === id);
   }
+  // clearFavorite() {
+  //   this.drinks = [];
+  //   return this.drinks;
+  // }
 
 }

@@ -3,11 +3,6 @@
     <mat-icon>more_vert</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-  <div mat-menu-item [role]="translateService.getDefaultLang()"
-    (valueChange)="switchLang($event)">
-    <button (click)="'en'">English</button>
-    <button (click)="'ru'">Русский</button>
-  </div>
   <button mat-menu-item>
       <mat-icon>notifications_off</mat-icon>
       <span>Disable alerts</span>
@@ -46,10 +41,12 @@
   
   
 
-
-<!-- <mat-label>Choose an option</mat-label>
-        <button [value]="translateService.getDefaultLang()"
+<mat-form-field>
+<mat-label>Choose an option</mat-label>
+        <mat-select [value]="translateService.getDefaultLang()"
           (valueChange)="switchLang($event)">
-          <button [value]="'en'">English</button>
-          <button [value]="'ru'">Русский</button>
-        </button> -->
+        
+          <mat-option [value]="'en'">English</mat-option>
+          <mat-option [value]="'ru'">Русский</mat-option>
+        </mat-select>
+</mat-form-field>

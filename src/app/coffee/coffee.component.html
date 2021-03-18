@@ -1,20 +1,25 @@
 <app-coffee-search></app-coffee-search>
 
-<h2>Select a drink</h2>
+<h2>{{'Select a drink' | translate}}</h2>
 
 <ul class="drinks">
   <li *ngFor="let coffee of drinks">
 
-    <button clickColor color="red" (click)="addToFavorite(coffee)" mat-icon-button class="favorite-icon" aria-label="heart icon"><mat-icon>favorite</mat-icon></button> 
+    <button [style.color]="coffeeInFavorite(coffee.id) ? 'red' : 'gray'"
+            mat-icon-button class="favorite-icon"
+            aria-label="heart icon"
+            (click)="addToFavorite(coffee)">
+      <mat-icon>favorite</mat-icon>
+    </button> 
     
     <a routerLink="/detail/{{coffee.id}}">
       <img [src]="assetPath + coffee.imagePath" class="card-img-top" [alt]="coffee.name">
-      <span class="title">{{coffee.name}}</span> 
+      <span class="title">{{coffee.name | translate}}</span> 
       <span class="description">{{coffee.description}}</span>
       <span class="price">{{coffee.price}} </span> 
     </a>
 
-    <a class="btn btn-success" (click)="addToCart(coffee)" role="button">Add to card</a>
+    <a class="btn btn-success" (click)="addToCart(coffee)" role="button">{{'Add to card' | translate}}</a>
       <div *ngIf="getCoffeeCount(coffee)" type="button" class="btn btn-success">
          <button (click)="decrease(coffee)">-</button> <span class="badge badge-light">{{getCoffeeCount(coffee)}}</span> <button (click)="increase(coffee)">+</button>
       </div>

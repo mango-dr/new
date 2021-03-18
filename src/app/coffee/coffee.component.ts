@@ -61,4 +61,8 @@ getCoffeeCount(coffee: Coffee): number {
       .subscribe(drinks => this.drinks = drinks);
   }
 
+  coffeeInFavorite(id: number): boolean {
+   return this.favoriteService.isFavorite(id);
+  }
+
 }

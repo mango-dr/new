@@ -11,14 +11,7 @@ import { Coffee } from '../coffee';
 export class CartComponent implements OnInit {
   drinks = this.cartService.getDrinks();
   assetPath = './assets/';
- item;
 
-  
-  removeFromCart(id: number): void {
-     this.cartService.removeFromCart(id);
-    window.alert('Your product has been deleted from the cart!');
-  
-  }
 
   constructor(private cartService: CartService,
               private location: Location) { }
@@ -26,6 +19,11 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  removeFromCart(id: number): void {
+     this.cartService.removeFromCart(id);
+    window.alert('Your product has been deleted from the cart!');
+  
+  }
 
   increase(coffee: Coffee): void {
     this.cartService.addToCart(coffee);
@@ -41,6 +39,13 @@ export class CartComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  get price(): number {
+    return this.drinks.reduce((sum, drink) => {
+      sum += drink.count * drink.coffee.price;
+      return sum;
+    }, 0);
   }
 
 }

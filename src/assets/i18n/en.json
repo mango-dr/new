@@ -1,9 +1,11 @@
 {
-    "name": "en:name",
-    "auth.title": "en: auth title",
-    "login": {
-        "title": "en: login title"
-    },
-
+    "home": "Home",
+    "drinks": "Drinks",
+    "account": "Create an account",
+    "Select a drink": "Select a drink",
+    "Your order": "Your order",
+    "Shipping": "Shipping",
+    "Add to card": "Add to card",
+    
     "coffee.name": "Latte"
 }

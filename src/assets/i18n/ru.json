@@ -1,9 +1,11 @@
 {
-    "name": "ru:имя",
-    "auth.title": "ru: auth title",
-    "login": {
-        "title": "ru: login title"
-    },
+    "home": "Главная",
+    "drinks": "Напитки",
+    "account": "Создать аккаунт",
+    "Select a drink": "Выберите напиток",
+    "Your order": "Ваш заказ",
+    "Shipping": "Доставка",
+    "Add to card": "Добавить в корзину",
 
     "coffee.name": "Латте"
 }

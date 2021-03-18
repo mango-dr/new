@@ -12,7 +12,7 @@ import { Coffee } from '../coffee';
 })
 export class FavoriteComponent implements OnInit {
   drinks = this.favoriteService.getFavorites();
-  coffee: Coffee;
+  // coffee: Coffee;
 
   constructor(private favoriteService: FavoriteService,
               private cartService: CartService,

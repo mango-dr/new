@@ -1,12 +1,14 @@
+<div class="favorites">
 <h3>My favorites</h3>
 
 <div class="favorite-item" *ngFor="let coffee of drinks">
-  <span>{{ coffee.name }}</span>
-  <span>{{ coffee.price | currency }}</span>
+  <span>{{ coffee.coffee.name }}</span>
+  <span>{{ coffee.coffee.price | currency }}</span>
 </div>
 
 <div class="buttons">
     <button (click)="goBack()">Go back</button>
   
-    <button (click)="addToCart(coffee)">Add to a cart</button>
+    <!-- <button (click)="addToCart()">Add to a cart</button> -->
+  </div>
   </div>

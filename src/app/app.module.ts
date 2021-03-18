@@ -53,8 +53,8 @@ import { SplashScreenStateService } from './splash-screen-state.service';
 
 
 
-export function translateLoaderFactory(http: HttpClient): TranslateHttpLoader{
-  return new TranslateHttpLoader(http);
+export function httpTranslateLoader(http: HttpClient): TranslateHttpLoader{
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 const ANGULAR_MODULES = [
@@ -63,7 +63,7 @@ const ANGULAR_MODULES = [
   FormsModule,
   HttpClientModule,
   HttpClientInMemoryWebApiModule.forRoot(
-    InMemoryDataService, { dataEncapsulation: false }
+    InMemoryDataService, { dataEncapsulation: false, passThruUnknownUrl: true }
   ),
 ];
 
@@ -96,7 +96,7 @@ const TRANSLATION_MODULE = [
   TranslateModule.forRoot({
     loader: {
       provide: TranslateLoader,
-      useFactory: translateLoaderFactory,
+      useFactory: httpTranslateLoader,
       deps: [HttpClient]
     }
   })
